@@ -1,0 +1,25 @@
+P: 
+Input: positive integer
+Output: array containing the individual digits of the integer
+
+Convert a positive integer into an array where each element is a digit from the integer
+
+E: 
+- single digit integer
+- multi-digit integer
+
+DA:
+store the integer as a string
+
+convert the integer to a string
+initialize an empty array
+interate through the string, pushing each digit to the array
+
+START
+SET int = input arguement
+SET string = int converted to a string
+SET arr = empty array
+FOR each index of the string
+  append the element at that index to the end of arr
+RETURN arr
+END

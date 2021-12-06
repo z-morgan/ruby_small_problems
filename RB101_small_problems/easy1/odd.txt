@@ -1,0 +1,24 @@
+P: 
+input: an integer of any sort
+output: boolean, true if input's absolute value is odd
+
+Cannot use #odd? or #even?
+Assume valid input
+RETURN true if the num is not evenly divisible by 2
+
+see if the number is evenly divisible by two. if not, return true
+
+E:
+- positive integer + / -
+- negative integer + / -
+
+DA: 
+is the number evenly divisible by 2? 
+if yes, return false
+if no, return true
+
+START
+SET num = input arguement
+return true IF num % 2 != 0
+return false IF num % 2 == 0
+END

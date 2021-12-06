@@ -1,0 +1,29 @@
+P: 
+inputs: a string and an integer
+outputs: string multiple times
+
+method prints the string, it doesn't need to return it
+
+get a string and a positive integer from the user, and print the string as many times as the number
+
+E: 
+- a string and a positive integer
+- a string and a negative integer
+- cases where either arguement is an invalid class
+- cases where the wrong number of arguments are passed to the method
+
+DA: 
+the arguements can both be stored as variables
+
+A: 
+stores the arguements as variables
+loops over the print statement as many times as the number
+
+START
+SET string = the first arguement
+SET n = the second arguement
+SET count = 1
+WHILE count <= n 
+  PRINT string
+  SET count = count + 1
+END

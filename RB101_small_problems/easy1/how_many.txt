@@ -1,0 +1,31 @@
+P:
+input array of strings
+output: print the number of occurances of each element
+
+elements must be absolutely unique, and case sensitive.
+the number must be printed alongside the element
+
+Given an array of elements, count the number of occurances of each element,
+and display the number alongside the element
+
+E: 
+- the given example
+- the given example, but with some case-changes to strings,
+- change up the class of some elements
+
+D: the program will build a hash to store the number of occurances of each element
+A: 
+create a new hash
+iterate through the array, for each element:
+  if the element is not in the hash, add it, and assign a value of 1
+  if the element is in the hash, incriment its value by 1
+display the hash
+
+START
+SET hash = an empty hash
+FOREACH element in the array:
+  IF element is not in hash, add element with value SET to 1
+  IF element is already in hash, incriment value by 1
+FOREACH element in the hash:
+  PRINT the key and the value
+

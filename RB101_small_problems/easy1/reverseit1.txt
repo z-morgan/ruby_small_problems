@@ -1,0 +1,17 @@
+P:
+input a string
+output a string with the words in reverse order
+
+reorders the string, so the sequence of elements demarcated by spaces is reversed
+an empty string always results in an empty string w/ no spaces
+
+D:
+converts the string into an array with each word as an element
+A:
+strip any extraneous spaces from the ends of the string
+check if the string is empty, if not:
+splits the string into an array of individual words
+repeatedly pops off the last element of the array, concatenating it to a string with a space
+finally, strips off the tailing space and returns the string
+
+

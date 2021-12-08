@@ -3,17 +3,13 @@
 def reverse_sentence(string)
   string.strip!
   return '' if string.empty?
-  array = string.split
-  rev_string = ""     
 
-  until array.empty?
-    rev_string << " #{array.pop}"
-  end
+  array = string.split
+  rev_string = ''
+  rev_string << " #{array.pop}" until array.empty?
 
   rev_string.strip
 end
-
-
 
 puts reverse_sentence('Hello World') == 'World Hello'
 puts reverse_sentence('Reverse these words') == 'words these Reverse'

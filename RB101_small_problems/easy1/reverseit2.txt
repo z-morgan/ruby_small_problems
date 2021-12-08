@@ -1,0 +1,22 @@
+P:
+write a method- Input: string as arguement Output: returns string with words longer than 4 letters reversed
+
+words are defined as characters with no spaces
+there should be no spaces in the output unless there is more than one word
+
+Scan the string for words longer than 4 letters, reverse those words
+
+E: 
+puts reverse_words('Professional')          # => lanoisseforP
+puts reverse_words('Walk around the block') # => Walk dnuora the kcolb
+puts reverse_words('Launch School')         # => hcnuaL loohcS
+
+D:
+Array with each word as an element
+
+A: 
+convert the string into an array of words
+iterate through the string, checking if words are longer than 4 characters.
+  if so, reverse the word
+Convert the array back to a string
+

@@ -1,0 +1,8 @@
+Problem:
+input - positive integer, and a boolean
+output - positive integer
+
+rules/reqs: 
+if boolean is true, returns half of the integer input
+if boolean is false, returns 0
+

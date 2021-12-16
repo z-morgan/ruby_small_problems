@@ -1,0 +1,10 @@
+ P: 
+Input: an array of one or more positive integers
+Output: integer
+
+Write a method that takes an array as an arguement and returns the average of the contents of the array.
+
+DA:
+SET sum = 0
+FOR each element in the array, add that element to sum
+divide sum by the total number of elements in the array

@@ -1,0 +1,13 @@
+P: method that takes a positivei integer as an arguement, and returns a 
+string of alternating ones and zeros of length integer, and always starts with 1.
+
+E: 
+puts stringy(6) == '101010'
+puts stringy(9) == '101010101'
+puts stringy(4) == '1010'
+puts stringy(7) == '1010101'
+- 0 == ''
+
+A: 
+instantiate empty string
+loop n times, appending 1 to the string if the n instance is even, and zero if it is odd.

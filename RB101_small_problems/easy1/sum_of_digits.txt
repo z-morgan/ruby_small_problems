@@ -1,0 +1,11 @@
+P:
+input integer
+output integer
+
+DA:
+SET sum = 0
+While sum > 0
+  divide the input by 10, and add the remainder to sum
+end
+
+

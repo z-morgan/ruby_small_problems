@@ -29,12 +29,13 @@ end
 =end
 
 def reverse_array(arr)
-  back_num = nil
+  # back_num = nil
   index = 0
   until index > ((arr.size / 2) - 1)
-    back_num = arr[-(index + 1)]
-    arr[-(index + 1)] = arr[index]
-    arr[index] = back_num
+    # back_num = arr[-(index + 1)]
+    # arr[-(index + 1)] = arr[index]
+    # arr[index] = back_num
+    arr[index], arr[-(index + 1)] = arr[-(index + 1)], arr[index]
     index += 1
   end
   arr

@@ -9,4 +9,3 @@ puts does_include([], 3) == false
 puts does_include([nil], nil) == true
 puts does_include([], nil) == false
 
-### look at LS's first solution. 

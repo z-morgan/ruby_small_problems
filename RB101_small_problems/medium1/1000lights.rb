@@ -51,7 +51,7 @@ loop 1 to n times through the hash, and on each iteration:
   flip every number'th value
 return an array containing all of the keys whose value is true
 =end
-
+require 'pry'
 def generate_switches(n)
   hash = {}
   1.upto(n) { |num| hash[num] = false }
@@ -64,7 +64,7 @@ def which_switches_are_on?(n)
   1.upto(n) do |n|
     switches.each { |key, v| switches[key] = !switches[key] if key % n == 0 }
   end
-  
+  binding.pry
   switches.select { |_, v| v == true }.keys
 end
   

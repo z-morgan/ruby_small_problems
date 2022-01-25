@@ -1,9 +1,9 @@
 cards = [2, 3, 4, 5, 6, 7, 8, 9, 10, :jack, :queen, :king, :ace]
 
-deck = { :hearts   => cards,
-         :diamonds => cards,
-         :clubs    => cards,
-         :spades   => cards }
+deck = { :hearts   => cards.clone,
+         :diamonds => cards.clone,
+         :clubs    => cards.clone,
+         :spades   => cards.clone }
 
 def score(card)
   case card
@@ -26,12 +26,16 @@ end
 
 # Determine the score of the remaining cards in the deck
 
-sum = deck.reduce(0) do |sum, (_, remaining_cards)|
-  remaining_cards.map do |card|
+
+
+
+
+sum = deck.map do |_, remaining_cards|
+  score_arr = remaining_cards.map do |card|
     score(card)
   end
 
-  sum += remaining_cards.sum
+  score_arr.sum
 end
 
-puts sum
+puts sum.reduce(:+)

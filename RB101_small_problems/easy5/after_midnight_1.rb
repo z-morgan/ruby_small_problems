@@ -65,3 +65,62 @@ end
 # puts time_of_day(3000)
 # puts time_of_day(800)
 # puts time_of_day(-4231)
+
+
+###### Second attempt at the original problem, while studying for RB109 interview assessment ###
+
+=begin
+method takes an integer, and returns a string in 24 hour time format. The return value is the time of day cooresponding to the input integer before or after midnight. 
+input: integer
+return: string
+
+- if the input is negative, the return value is the input number of minutes before midnight.
+- if the input is positive, the return value is the input number of minutes after midnight.
+- if input is zero, return '00:00'
+
+time_of_day(0) == "00:00"
+time_of_day(-3) == "23:57"
+time_of_day(35) == "00:35"
+time_of_day(-1437) == "00:03"
+time_of_day(3000) == "02:00"
+time_of_day(800) == "13:20"
+time_of_day(-4231) == "01:29"
+
+D:
+A:
+get the number of minutes after midnight:
+store the sign, and then treat the absolute value of the number according to the sign it had.
+if the value exceeds 1440, subtract 1440 from the value until the value is less than 1440.
+if the value is negative, subtract the value from 1440 to get the number of minutes after midnight
+if the value is positive, it is the number of minutes after midnight.
+
+divide the number of minutes after midnight by 60, and report that as the number of hours
+the remainder is the number of minutes
+use string interpolation to insert those numbers into a string, which is returned. 
+if either value is only one digit, add a zero character to the string in front of it. 
+=end
+
+def get_min_after_midnight(int)
+  is_positive = true
+  is_positive = false if int < 0
+  abs_int = int.abs
+  until abs_int < 1440
+    abs_int -= 1440
+  end
+  abs_int = 1440 - abs_int unless is_positive
+  abs_int
+end
+
+def form(str)
+  str = '0' + str if str.size < 2
+  str
+end
+
+def time_of_day(int)
+  min_after_midnight = get_min_after_midnight(int)
+  hours = min_after_midnight / 60
+  minutes = min_after_midnight % 60
+  hours_str = form(hours.to_s)
+  minutes_str = form(minutes.to_s)
+  hours_str + ':' + minutes_str
+end
